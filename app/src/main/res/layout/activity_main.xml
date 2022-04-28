@@ -6,51 +6,48 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textViewA"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
-        android:background="#f20"
-        android:gravity="center"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="A"
-        android:textSize="40sp"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textViewB"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="150dp"
-        android:background="#45BDC8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:gravity="center"
-        android:text="B"
-        android:textSize="40sp" />
-
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrier"
-        app:constraint_referenced_ids="textViewA,textViewB"
-        app:barrierDirection="end"
+        app:layout_constraintEnd_toStartOf="@id/textViewB"
+        android:id="@+id/textViewA"
+        android:textColor="#ffffff"
+        android:background="#f20"
+        android:paddingVertical="5dp"
+        android:text="A"
+        android:paddingHorizontal="25dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
     <TextView
-        android:id="@+id/textViewC"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="150dp"
-        android:background="#45BDC8"
-        app:layout_constraintStart_toStartOf="@id/barrier"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@id/textViewA"
+        app:layout_constraintEnd_toStartOf="@id/textViewC"
+        android:id="@+id/textViewB"
+        android:textColor="#ffffff"
+        android:background="#61CD78"
+        android:paddingVertical="5dp"
+        android:text="B"
+        android:paddingHorizontal="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textViewB"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/textViewC"
+        android:textColor="#ffffff"
+        android:background="#3B51D3"
+        android:paddingVertical="5dp"
         android:text="C"
-        android:textSize="40sp" />
+        android:paddingHorizontal="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
