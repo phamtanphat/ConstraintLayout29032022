@@ -32,5 +32,25 @@
         android:text="B"
         android:textSize="40sp" />
 
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        app:constraint_referenced_ids="textViewA,textViewB"
+        app:barrierDirection="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/textViewC"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="150dp"
+        android:background="#45BDC8"
+        app:layout_constraintStart_toStartOf="@id/barrier"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"
+        android:text="C"
+        android:textSize="40sp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
